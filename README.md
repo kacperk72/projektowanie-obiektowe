@@ -9,3 +9,5 @@ Zadanie 1 Paradygmaty
 ✅ 4.5 5 testów jednostkowych testujące procedury https://github.com/kacperk72/projektowanie-obiektowe/commit/f3e7fb38e52b83287c0562d33cb873b1420402f9
 
 ❌ 5.0 Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker
+
+demo: https://github.com/kacperk72/projektowanie-obiektowe/commit/14b1737a383e8ea51c98fd137356a49a3583596d
