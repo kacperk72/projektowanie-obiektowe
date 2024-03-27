@@ -11,3 +11,18 @@ Zadanie 1 Paradygmaty
 ❌ 5.0 Skrypt w bashu do uruchamiania aplikacji w Pascalu via docker
 
 demo: https://github.com/kacperk72/projektowanie-obiektowe/commit/14b1737a383e8ea51c98fd137356a49a3583596d
+
+
+Zadanie 2 Wzorce architektury
+
+✅ 3.0 Należy stworzyć jeden model z kontrolerem z produktami, zgodnie z CRUD
+
+✅ 3.5 Należy stworzyć skrypty do testów endpointów via curl
+
+✅ 4.0 Należy stworzyć dwa dodatkowe kontrolery wraz z modelami
+
+✅ 4.5 Należy stworzyć widoki do wszystkich kontrolerów  https://github.com/kacperk72/projektowanie-obiektowe/commit/20729b4ce249dad01f5330b0372ab57d04edd9e6
+
+❌ 5.0 Stworzenie panelu administracyjnego z mockowanym logowaniem  
+
+demo : https://github.com/kacperk72/projektowanie-obiektowe/blob/master/zad2/proj%20obj%20zad2.mkv
