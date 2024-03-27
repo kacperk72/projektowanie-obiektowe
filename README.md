@@ -26,3 +26,22 @@ Zadanie 2 Wzorce architektury
 ❌ 5.0 Stworzenie panelu administracyjnego z mockowanym logowaniem  
 
 demo : https://github.com/kacperk72/projektowanie-obiektowe/blob/master/zad2/proj%20obj%20zad2.mkv
+
+
+Zadanie 3 Wzorce kreacyjne
+
+Spring Boot (Kotlin)
+
+Proszę stworzyć prosty serwis do autoryzacji, który zasymuluje autoryzację użytkownika za pomocą przesłanej nazwy użytkownika oraz hasła. Serwis powinien zostać wstrzyknięty do kontrolera za pomocą anotacji @Autowired. Aplikacja ma oczywiście zawierać jeden kontroler i powinna zostać napisana w języku Kotlin. Oparta powinna zostać na frameworku Spring Boot, podobnie jak na zajęciach. Serwis do autoryzacji powinien być singletonem.
+
+✅ 3.0 Należy stworzyć jeden kontroler wraz z danymi wyświetlanymi z listy na endpoint’cie w formacie JSON - Kotlin + Spring Boot
+
+✅ 3.5 Należy stworzyć klasę do autoryzacji (mock) jako Singleton w formie eager
+
+✅ 4.0 Należy obsłużyć dane autoryzacji przekazywane przez użytkownika
+
+✅ 4.5 Należy wstrzyknąć singleton do głównej klasy via @Autowired  https://github.com/kacperk72/projektowanie-obiektowe/commit/1db4eca48344f4da55b013b597077ee7b82184cf
+
+❌ 5.0 Obok wersji Eager do wyboru powinna być wersja Singletona w wersji lazy
+
+demo: https://github.com/kacperk72/projektowanie-obiektowe/blob/master/zad3/zad%203%20demo.mkv
