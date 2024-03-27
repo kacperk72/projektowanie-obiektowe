@@ -1,0 +1,15 @@
+{# templates/category/new.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Dodaj Kategorię{% endblock %}
+
+{% block body %}
+<h2>Dodaj Nową Kategorię</h2>
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+    <button type="submit" class="btn btn-success">Zapisz</button>
+{{ form_end(form) }}
+    <a href="{{ path('app_category') }}">Powrót do listy</a>
+{% endblock %}

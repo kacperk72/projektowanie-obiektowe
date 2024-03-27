@@ -1,0 +1,16 @@
+{# templates/supplier/new.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Dodaj Dostawcę{% endblock %}
+
+{% block body %}
+<h2>Dodaj Nowego Dostawcę</h2>
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit">Zapisz</button>
+{{ form_end(form) }}
+
+<a href="{{ path('app_supplier') }}">Powrót do listy</a>
+{% endblock %}

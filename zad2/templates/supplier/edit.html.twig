@@ -1,0 +1,17 @@
+{# templates/supplier/edit.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Edytuj Dostawcę{% endblock %}
+
+{% block body %}
+<h2>Edytuj Dostawcę</h2>
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit">Zaktualizuj</button>
+{{ form_end(form) }}
+
+<a href="{{ path('supplier_show', {'id': supplier.id}) }}">Powrót do szczegółów</a>
+<a href="{{ path('app_supplier') }}">Powrót do listy</a>
+{% endblock %}

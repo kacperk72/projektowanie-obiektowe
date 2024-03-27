@@ -1,0 +1,17 @@
+{# templates/category/edit.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Edytuj Kategorię{% endblock %}
+
+{% block body %}
+<h2>Edytuj Kategorię</h2>
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button type="submit">Zaktualizuj</button>
+{{ form_end(form) }}
+
+<a href="{{ path('category_show', {'id': category.id}) }}">Powrót do szczegółów</a>
+<a href="{{ path('app_category') }}">Powrót do listy</a>
+{% endblock %}

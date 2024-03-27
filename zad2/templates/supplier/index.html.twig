@@ -1,0 +1,29 @@
+{# templates/supplier/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista Dostawców{% endblock %}
+
+{% block body %}
+<h2>Lista Dostawców</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nazwa</th>
+        <th>Akcje</th>
+    </tr>
+    {% for supplier in suppliers %}
+        <tr>
+            <td>{{ supplier.id }}</td>
+            <td>{{ supplier.name }}</td>
+            <td>
+                <a href="{{ path('supplier_show', {'id': supplier.id}) }}">Pokaż</a>
+                <a href="{{ path('supplier_edit', {'id': supplier.id}) }}">Edytuj</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+<a href="{{ path('supplier_new') }}">Dodaj nowego dostawcę</a>
+{% endblock %}

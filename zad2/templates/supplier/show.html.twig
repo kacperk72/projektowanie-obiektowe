@@ -1,0 +1,28 @@
+{# templates/supplier/show.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Szczegóły Dostawcy{% endblock %}
+
+{% block body %}
+<h2>Szczegóły Dostawcy</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <td>{{ supplier.id }}</td>
+    </tr>
+    <tr>
+        <th>Nazwa</th>
+        <td>{{ supplier.name }}</td>
+    </tr>
+</table>
+
+<a href="{{ path('app_supplier') }}">Powrót do listy</a>
+<a href="{{ path('supplier_edit', {'id': supplier.id}) }}">Edytuj</a>
+
+<form method="post" action="{{ path('supplier_delete', {'id': supplier.id}) }}" onsubmit="return confirm('Czy na pewno chcesz usunąć tego dostawcę?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ supplier.id) }}">
+    <button type="submit">Usuń</button>
+</form>
+{% endblock %}

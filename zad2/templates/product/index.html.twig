@@ -1,0 +1,35 @@
+{# templates/product/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista Produktów{% endblock %}
+
+{% block body %}
+<h2>Lista Produktów</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for product in products %}
+        <tr>
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>
+                <a href="{{ path('product_show', {'id': product.id}) }}">Pokaż</a>
+                <a href="{{ path('product_edit', {'id': product.id}) }}">Edytuj</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<a href="{{ path('product_new') }}">Dodaj nowy produkt</a>
+{% endblock %}

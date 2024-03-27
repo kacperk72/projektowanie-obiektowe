@@ -1,0 +1,32 @@
+{# templates/product/show.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Szczegóły Produktu{% endblock %}
+
+{% block body %}
+<h2>Szczegóły Produktu</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <td>{{ product.id }}</td>
+    </tr>
+    <tr>
+        <th>Nazwa</th>
+        <td>{{ product.name }}</td>
+    </tr>
+    <tr>
+        <th>Cena</th>
+        <td>{{ product.price }}</td>
+    </tr>
+</table>
+
+<a href="{{ path('product_index') }}">Powrót do listy produktów</a>
+<a href="{{ path('product_edit', {'id': product.id}) }}">Edytuj</a>
+
+<form method="post" action="{{ path('product_delete', {'id': product.id}) }}" onsubmit="return confirm('Czy na pewno chcesz usunąć ten produkt?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ product.id) }}">
+    <button type="submit" class="btn">Usuń</button>
+</form>
+{% endblock %}
